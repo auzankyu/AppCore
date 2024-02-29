@@ -19,10 +19,11 @@ Pod::Spec.new do |spec|
   # spec.source       = { :path => '.' }
   spec.source       = { :git => "https://github.com/auzankyu/AppCore.git", :branch => "main" }
   spec.source_files = "AppCore/**/*.swift"
-  spec.resources    = ["AppCore/**/*.xib", "AppCore/**/*.storyboard"]
-  spec.resource_bundles = {
-    'AppCore' => ["AppCore/*.xcassets", "AppCore/**/*.xcassets"]
-  }
+  # spec.resources    = ["AppCore/**/*.xib", "AppCore/**/*.storyboard"]
+  # spec.resource_bundles = {
+  #   'AppCore' => ["AppCore/*.xcassets", "AppCore/**/*.xcassets"]
+  # }
+  spec.static_framework = true
   spec.dependency 'FirebaseAnalytics', '~> 10.11.0'
   spec.dependency 'FirebaseAuth', '~> 10.11.0'
   spec.dependency 'FirebaseFirestore', '~> 10.11.0'
